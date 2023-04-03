@@ -1,0 +1,169 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:sans-serif;
+    background:#000000 ;
+    color:whitesmoke;
+    
+}
+.header{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: rgb(248, 245, 245);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+}
+.header:hover{
+   color: #fafbfa;
+   text-shadow: -4px 3px 0 #0435fb;
+}
+.contenedor{
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    -ms-grid-colums: repeat(4,1fr);
+    grid-gap:30px 30px;
+    margin: auto ;
+    
+}
+
+.contenedor .pelicula{
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+.contenedor .pelicula:last-child{
+    margin-bottom: 80px;
+}
+
+
+
+
+.contenedor .pelicula .titulo{
+    font-size:20px ;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.contenedor .pelicula .poster{
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius:15px;
+    
+}
+
+.paginacion{
+    
+    position:fixed;
+    bottom:0;
+    /* background: #100a1f; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 300px;
+    padding:10px;
+    
+}
+
+.paginacion button{
+    cursor: pointer;
+    border: none;
+    display:flex;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 30px;
+    font-weight: 300;
+}
+
+
+.paginacion button:hover{
+    background: greenyellow;
+}
+
+
+.pag{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 5px;
+}
+
+/* mediasquery */
+@media screen and (max-width:600px){
+    body{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .header{
+        font-size: 2em;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        color: rgb(251, 6, 6);
+    }
+    .pag{
+        font-size: 1em;
+    }
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        margin: 0 40px 0 10px;
+    }
+    .contenedor .poster{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    .paginacion{
+        display: flex;
+        margin: 10px 10px;
+        gap: 0;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width:400px){
+    body{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .header{
+        font-size: 1.5em;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        color: rgb(251, 6, 6);
+    }
+    .pag{
+        font-size: 0.5em;
+    }
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 10px 10px 10px;
+    }
+    .paginacion{
+        display: flex;
+        padding: 0%;
+        align-items: center;
+        /* flex-direction: column; */
+        margin: 10px 0 10px 0;
+        gap: 0;
+    }
+}
